@@ -10,4 +10,5 @@ Gem::Specification.new do |s|
   s.homepage    =
       'https://github.com/blinfoldking/solid-snake'
   s.license       = 'MIT'
+  s.add_runtime_dependency "thor"
 end
