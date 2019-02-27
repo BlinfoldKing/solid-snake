@@ -25,22 +25,24 @@ module SolidSnake
                 componentsGroup = group if group.path == "Components"
             end
 
+            return if componentsGroup.nil?
+
             # generate root of component
             componentName = name.capitalize
-
             generatedPath = "./#{mainGroup.path}/Components/#{componentName}"
             FileUtils.mkdir_p generatedPath
             generatedGroup = componentsGroup.new_group componentName
 
+            puts "Component Created"
+
             implPath = "./#{mainGroup.path}/Components/#{componentName}/Implementations"
             FileUtils.mkdir_p implPath 
+            interPath = "./#{mainGroup.path}/Components/#{componentName}/Interfaces"
+            FileUtils.mkdir_p interPath
 
-            interfacePath = "./#{mainGroup.path}/Components/#{componentName}/Interfaces"
-            FileUtils.mkdir_p interfacePath
-
+            interfaces = generatedGroup.new_group "Interfaces", interPath
             implementations = generatedGroup.new_group "Implementations"
-            interfaces = generatedGroup.new_group "Interfaces"
-            
+
             project.save
         end
 
