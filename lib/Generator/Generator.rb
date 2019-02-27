@@ -3,7 +3,7 @@ require 'fileutils'
 module SolidSnake
     class Generator
         def interactor name
-
+            
         end
 
         def presenter name

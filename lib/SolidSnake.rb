@@ -30,7 +30,7 @@ module SolidSnake
 
             generatedPath = "./#{mainGroup.path}/Components/#{componentName}"
             FileUtils.mkdir_p generatedPath
-            generatedGroup = componentsGroup.new_group componentName, generatedPath
+            generatedGroup = componentsGroup.new_group componentName
 
             implPath = "./#{mainGroup.path}/Components/#{componentName}/Implementations"
             FileUtils.mkdir_p implPath 
@@ -38,8 +38,8 @@ module SolidSnake
             interfacePath = "./#{mainGroup.path}/Components/#{componentName}/Interfaces"
             FileUtils.mkdir_p interfacePath
 
-            implementations = generatedGroup.new_group "Implementations", implPath
-            interfaces = generatedGroup.new_group "Interfaces", interfacePath
+            implementations = generatedGroup.new_group "Implementations"
+            interfaces = generatedGroup.new_group "Interfaces"
             
             project.save
         end
