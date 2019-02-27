@@ -4,6 +4,6 @@ if RUBY_VERSION < '2.0.0'
   abort "SolidSnake requires Ruby 2.0.0 or higher"
 end
 
-require_relative '../lib/SolidSnake.rb'
+require 'SolidSnake'
 
 puts SolidSnake::CLI.start ARGV
