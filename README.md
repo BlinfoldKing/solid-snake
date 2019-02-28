@@ -13,3 +13,4 @@ Project and File Generator for iOS Swift Development using V.I.P.E.R. Architectu
 4. run `chmod +x ./install.sh && ./install.sh`
 5. cd into your project folder
 6. run `solid-snake g [ComponentName]`, ex: `solid-snake g Login`
+7. add each file to target in xcode
