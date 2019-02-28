@@ -1,6 +1,6 @@
 # Solid Snake
 
-[solid-snake](./solid-snake.jpg)
+![solid-snake](./solid-snake.jpg)
 
 a weapon to surpass metal gear.
 
