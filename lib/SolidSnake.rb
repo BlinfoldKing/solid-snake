@@ -20,7 +20,6 @@ module SolidSnake
             project = Xcodeproj::Project.open @xcodeproj
             mainGroup = project.groups[0]
             testGroup = project.groups[1]
-
             componentsGroup = nil
             for group in mainGroup.groups
                 componentsGroup = group if group.path == "Components"
@@ -34,42 +33,66 @@ module SolidSnake
             FileUtils.mkdir_p generatedPath
             generatedGroup = componentsGroup.new_group componentName
 
-            puts "Component Created"
 
             implPath = "./#{mainGroup.path}/Components/#{componentName}/Implementations"
             FileUtils.mkdir_p implPath 
             interPath = "./#{mainGroup.path}/Components/#{componentName}/Interfaces"
             FileUtils.mkdir_p interPath
 
-            interfaces = generatedGroup.new_group "Interfaces", interPath
-            implementations = generatedGroup.new_group "Implementations", implPath
+            interfaces = generatedGroup.new_group "Interfaces", "#{componentName}/Interfaces"
+            implementations = generatedGroup.new_group "Implementations", "#{componentName}/Implementations"
 
             # Generate interator Files
             interactorProtocolPath = "#{interPath}/#{componentName}InteractorProtocol.swift" 
             interactorProtocolFile = File.open interactorProtocolPath, "w" 
             interactorProtocolFile.puts SolidSnake::Generator.interactor_protocol componentName
             interactorProtocolFile.close
-            interfaces.new_file interactorProtocolPath
+            interfaces.new_file "#{componentName}InteractorProtocol.swift"
 
             interactorImplementationPath = "#{implPath}/#{componentName}Interactor.swift" 
             interactorImplementationFile = File.open interactorImplementationPath, "w" 
             interactorImplementationFile.puts SolidSnake::Generator.interactor_implmentation componentName
             interactorImplementationFile.close
-            implementations.new_file interactorImplementationPath
+            implementations.new_file "#{componentName}Interactor.swift"
 
             # Generate Presenter Files
             presenterProtocolPath = "#{interPath}/#{componentName}PresenterProtocol.swift" 
             presenterProtocolFile = File.open presenterProtocolPath, "w" 
             presenterProtocolFile.puts SolidSnake::Generator.presenter_protocol componentName
             presenterProtocolFile.close
-            interfaces.new_file presenterProtocolPath
+            interfaces.new_file "#{componentName}PresenterProtocol.swift"
 
             presenterImplementationPath = "#{implPath}/#{componentName}Presenter.swift" 
             presenterImplementationFile = File.open presenterImplementationPath, "w" 
             presenterImplementationFile.puts SolidSnake::Generator.presenter_implementation componentName
             presenterImplementationFile.close
-            implementations.new_file presenterImplementationPath
+            implementations.new_file "#{componentName}Presenter.swift"
 
+            # Generate Presenter Test
+            interactorGroup = nil
+            presenterGroup = nil
+            for group in testGroup.groups
+                if group.path == "Interactor"
+                    interactorGroup = group
+                elsif group.path = "Presenter"
+                    presenterGroup = group
+                end
+            end
+
+            interactorTestPath = "./#{testGroup.path}/Interactor/#{componentName}InteractorTest.swift"
+            puts interactorTestPath
+            interactorTestFile = File.open interactorTestPath, "w"
+            interactorTestFile.puts SolidSnake::Generator.interactor_test componentName, mainGroup.path.to_s.gsub('-', '_')
+            interactorTestFile.close
+            interactorGroup.new_file "#{componentName}InteractorTest.swift"
+
+            presenterTestPath = "./#{testGroup.path}/Presenter/#{componentName}PresenterTest.swift"
+            presenterTestFile = File.open presenterTestPath, "w"
+            presenterTestFile.puts SolidSnake::Generator.presenter_test componentName, mainGroup.path.to_s.gsub('-', '_')
+            presenterTestFile.close
+            presenterGroup.new_file "#{componentName}PresenterTest.swift"
+
+            puts "Components Created"
             project.save
         end
 

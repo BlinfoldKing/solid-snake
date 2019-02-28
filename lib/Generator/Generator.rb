@@ -7,7 +7,7 @@ module SolidSnake
 import Foundation
 
 protocol #{name.capitalize}InteractorProtocol {
-    func generateTrue() -> bool
+    func generateTrue() -> Bool
 }
             )
         end
@@ -17,7 +17,7 @@ protocol #{name.capitalize}InteractorProtocol {
 import Foundation
 
 class #{name.capitalize}Interactor: #{name.capitalize}InteractorProtocol {
-    override func generateTrue() -> bool {
+    func generateTrue() -> Bool {
         return true
     }
 }
@@ -30,8 +30,22 @@ import XCTest
 
 @testable import #{projectName}
 class #{name.capitalize}InteractorTest: XCTestCase {
-    override func setUp() {
 
+    var interactor: #{name.capitalize}InteractorProtocol!
+
+    override func setUp() {
+        interactor = #{name.capitalize}Interactor()
+    }
+
+    func testGenerateTrue() {
+        // given
+        var x = false
+
+        // when
+        x = interactor.generateTrue()
+
+        // then
+        XCTAssert(x)
     }
 
     override func tearDown() {
@@ -58,16 +72,45 @@ import Foundation
 class #{name.capitalize}Presenter: #{name.capitalize}PresenterProtocol {
 
     var interactor: #{name.capitalize}InteractorProtocol!
-    var isTrue: bool
+    var isTrue: Bool = false
 
-    override func generateTrue() {
+    func generateTrue() {
         self.isTrue = interactor.generateTrue()
     }
 }
         )
         end
  
-        def presenter_test name
+        def self.presenter_test name, projectName
+            %Q(
+import XCTest
+
+@testable import #{projectName}
+class #{name.capitalize}PresenterTest: XCTestCase {
+
+    var presenter: #{name.capitalize}PresenterProtocol!
+
+    override func setUp() {
+        presenter = #{name.capitalize}Presenter()
+    }
+
+    func testGenerateTrue() {
+        // given
+        var x = false
+
+        // when
+        presenter.generateTrue()
+        x = presenter.isTrue
+
+        // then
+        XCTAssert(x)
+    }
+
+    override func tearDown() {
+
+    }
+}
+            )
         end
     end
 end

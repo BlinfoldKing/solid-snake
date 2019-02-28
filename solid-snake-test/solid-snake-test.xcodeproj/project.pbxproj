@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CC62AA722285777003B0413 /* ExampleInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2065299B842140F054CE360D /* ExampleInteractorProtocol.swift */; };
+		6CC62AA82228577A003B0413 /* ExamplePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E72FC71A43F4FF6300989C5 /* ExamplePresenterProtocol.swift */; };
+		6CC62AA9222857A4003B0413 /* ExampleInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A91831E3BA92D8EEE1B81C /* ExampleInteractorTest.swift */; };
+		6CC62AAA222857A8003B0413 /* ExamplePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FB8F2030FB0AAF90E5C1 /* ExamplePresenterTest.swift */; };
+		6CC62AAB222857C6003B0413 /* ExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C03DA79EFE133B7F07550 /* ExamplePresenter.swift */; };
+		6CC62AAC222857C8003B0413 /* ExampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFFD6DC9F547904DD672B1 /* ExampleInteractor.swift */; };
 		6CF684CB222661C4006B5794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF684CA222661C4006B5794 /* AppDelegate.swift */; };
 		6CF684CD222661C4006B5794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF684CC222661C4006B5794 /* ViewController.swift */; };
 		6CF684D0222661C4006B5794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF684CE222661C4006B5794 /* Main.storyboard */; };
@@ -26,8 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		39659525C8A9019379F358F8 /* ProfileInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileInteractorProtocol.swift; path = "./solid-snake-test/Components/Profile/Interfaces/ProfileInteractorProtocol.swift"; sourceTree = "<group>"; };
-		528C585C5D7331095736C5F4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfilePresenter.swift; path = "./solid-snake-test/Components/Profile/Implementations/ProfilePresenter.swift"; sourceTree = "<group>"; };
+		2065299B842140F054CE360D /* ExampleInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleInteractorProtocol.swift; sourceTree = "<group>"; };
+		3E72FC71A43F4FF6300989C5 /* ExamplePresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExamplePresenterProtocol.swift; sourceTree = "<group>"; };
+		5477FB8F2030FB0AAF90E5C1 /* ExamplePresenterTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExamplePresenterTest.swift; sourceTree = "<group>"; };
+		5E0C03DA79EFE133B7F07550 /* ExamplePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExamplePresenter.swift; sourceTree = "<group>"; };
 		6CF684C7222661C4006B5794 /* solid-snake-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "solid-snake-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF684CA222661C4006B5794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CF684CC222661C4006B5794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,8 +46,8 @@
 		6CF684DB222661C6006B5794 /* solid-snake-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "solid-snake-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF684DF222661C6006B5794 /* solid_snake_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solid_snake_testTests.swift; sourceTree = "<group>"; };
 		6CF684E1222661C6006B5794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B03F16CFEF408ADCDEA226E2 /* ProfilePresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfilePresenterProtocol.swift; path = "./solid-snake-test/Components/Profile/Interfaces/ProfilePresenterProtocol.swift"; sourceTree = "<group>"; };
-		FE1B7D6ED92B9652DEEBE745 /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileInteractor.swift; path = "./solid-snake-test/Components/Profile/Implementations/ProfileInteractor.swift"; sourceTree = "<group>"; };
+		B3A91831E3BA92D8EEE1B81C /* ExampleInteractorTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleInteractorTest.swift; sourceTree = "<group>"; };
+		C8AFFD6DC9F547904DD672B1 /* ExampleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +68,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		31C40EB3B8F0D48556F58764 /* Interfaces */ = {
+		03F025650F646AA90AF550AA /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				39659525C8A9019379F358F8 /* ProfileInteractorProtocol.swift */,
-				B03F16CFEF408ADCDEA226E2 /* ProfilePresenterProtocol.swift */,
+				2065299B842140F054CE360D /* ExampleInteractorProtocol.swift */,
+				3E72FC71A43F4FF6300989C5 /* ExamplePresenterProtocol.swift */,
 			);
 			name = Interfaces;
-			path = "./solid-snake-test/Components/Profile/Interfaces";
+			path = Example/Interfaces;
+			sourceTree = "<group>";
+		};
+		634192958DD458F20A18809F /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				C8AFFD6DC9F547904DD672B1 /* ExampleInteractor.swift */,
+				5E0C03DA79EFE133B7F07550 /* ExamplePresenter.swift */,
+			);
+			name = Implementations;
+			path = Example/Implementations;
+			sourceTree = "<group>";
+		};
+		6CC62A8B222845C9003B0413 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5477FB8F2030FB0AAF90E5C1 /* ExamplePresenterTest.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6CC62A8C222845D6003B0413 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				B3A91831E3BA92D8EEE1B81C /* ExampleInteractorTest.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		6CF684BE222661C4006B5794 = {
@@ -105,6 +139,8 @@
 		6CF684DE222661C6006B5794 /* solid-snake-testTests */ = {
 			isa = PBXGroup;
 			children = (
+				6CC62A8C222845D6003B0413 /* Interactor */,
+				6CC62A8B222845C9003B0413 /* Presenter */,
 				6CF684DF222661C6006B5794 /* solid_snake_testTests.swift */,
 				6CF684E1222661C6006B5794 /* Info.plist */,
 			);
@@ -114,28 +150,18 @@
 		6CF684EA2226626A006B5794 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				D1388C2284D1CF07A1B037C6 /* Profile */,
+				B3E24FBC6DE3040DD73C79C0 /* Example */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		BD09CA6DC298DD835E9E693D /* Implementations */ = {
+		B3E24FBC6DE3040DD73C79C0 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				FE1B7D6ED92B9652DEEBE745 /* ProfileInteractor.swift */,
-				528C585C5D7331095736C5F4 /* ProfilePresenter.swift */,
+				03F025650F646AA90AF550AA /* Interfaces */,
+				634192958DD458F20A18809F /* Implementations */,
 			);
-			name = Implementations;
-			path = "./solid-snake-test/Components/Profile/Implementations";
-			sourceTree = "<group>";
-		};
-		D1388C2284D1CF07A1B037C6 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				31C40EB3B8F0D48556F58764 /* Interfaces */,
-				BD09CA6DC298DD835E9E693D /* Implementations */,
-			);
-			name = Profile;
+			name = Example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,8 +265,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC62AAB222857C6003B0413 /* ExamplePresenter.swift in Sources */,
+				6CC62AAC222857C8003B0413 /* ExampleInteractor.swift in Sources */,
 				6CF684CD222661C4006B5794 /* ViewController.swift in Sources */,
+				6CC62AA722285777003B0413 /* ExampleInteractorProtocol.swift in Sources */,
 				6CF684CB222661C4006B5794 /* AppDelegate.swift in Sources */,
+				6CC62AA82228577A003B0413 /* ExamplePresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CF684E0222661C6006B5794 /* solid_snake_testTests.swift in Sources */,
+				6CC62AAA222857A8003B0413 /* ExamplePresenterTest.swift in Sources */,
+				6CC62AA9222857A4003B0413 /* ExampleInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
