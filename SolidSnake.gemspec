@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Project and File Generator for iOS Swift Development using V.I.P.E.R. Architecture"
   s.authors     = ["Ganesha Danu Enastika"]
   s.email       = 'ganeshadanu1@gmail.com'
-  s.files       = ["lib/SolidSnake.rb", "bin/solid-snake"]
+  s.files       = ["lib/Generator/Generator.rb", "lib/SolidSnake.rb", "bin/solid-snake"]
   s.homepage    =
       'https://github.com/blinfoldking/solid-snake'
   s.license      = 'MIT'

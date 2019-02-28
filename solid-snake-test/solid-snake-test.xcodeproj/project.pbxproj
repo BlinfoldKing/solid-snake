@@ -26,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		39659525C8A9019379F358F8 /* ProfileInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileInteractorProtocol.swift; path = "./solid-snake-test/Components/Profile/Interfaces/ProfileInteractorProtocol.swift"; sourceTree = "<group>"; };
+		528C585C5D7331095736C5F4 /* ProfilePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfilePresenter.swift; path = "./solid-snake-test/Components/Profile/Implementations/ProfilePresenter.swift"; sourceTree = "<group>"; };
 		6CF684C7222661C4006B5794 /* solid-snake-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "solid-snake-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF684CA222661C4006B5794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CF684CC222661C4006B5794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		6CF684DB222661C6006B5794 /* solid-snake-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "solid-snake-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF684DF222661C6006B5794 /* solid_snake_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solid_snake_testTests.swift; sourceTree = "<group>"; };
 		6CF684E1222661C6006B5794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B03F16CFEF408ADCDEA226E2 /* ProfilePresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfilePresenterProtocol.swift; path = "./solid-snake-test/Components/Profile/Interfaces/ProfilePresenterProtocol.swift"; sourceTree = "<group>"; };
+		FE1B7D6ED92B9652DEEBE745 /* ProfileInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProfileInteractor.swift; path = "./solid-snake-test/Components/Profile/Implementations/ProfileInteractor.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		183D2C19176127897A396C08 /* Logout */ = {
+		31C40EB3B8F0D48556F58764 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
-				EB3AEB3015EFB336216A24AD /* Interfaces */,
-				9F33F6772CD1AF6FD983C46C /* Implementations */,
+				39659525C8A9019379F358F8 /* ProfileInteractorProtocol.swift */,
+				B03F16CFEF408ADCDEA226E2 /* ProfilePresenterProtocol.swift */,
 			);
-			name = Logout;
+			name = Interfaces;
+			path = "./solid-snake-test/Components/Profile/Interfaces";
 			sourceTree = "<group>";
 		};
 		6CF684BE222661C4006B5794 = {
@@ -109,24 +114,28 @@
 		6CF684EA2226626A006B5794 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				183D2C19176127897A396C08 /* Logout */,
+				D1388C2284D1CF07A1B037C6 /* Profile */,
 			);
 			path = Components;
 			sourceTree = "<group>";
 		};
-		9F33F6772CD1AF6FD983C46C /* Implementations */ = {
+		BD09CA6DC298DD835E9E693D /* Implementations */ = {
 			isa = PBXGroup;
 			children = (
+				FE1B7D6ED92B9652DEEBE745 /* ProfileInteractor.swift */,
+				528C585C5D7331095736C5F4 /* ProfilePresenter.swift */,
 			);
 			name = Implementations;
+			path = "./solid-snake-test/Components/Profile/Implementations";
 			sourceTree = "<group>";
 		};
-		EB3AEB3015EFB336216A24AD /* Interfaces */ = {
+		D1388C2284D1CF07A1B037C6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				31C40EB3B8F0D48556F58764 /* Interfaces */,
+				BD09CA6DC298DD835E9E693D /* Implementations */,
 			);
-			name = Interfaces;
-			path = "./solid-snake-test/Components/Logout/Interfaces";
+			name = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
