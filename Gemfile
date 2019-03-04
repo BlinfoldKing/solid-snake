@@ -1,3 +1,3 @@
 gem 'thor'
-gem 'xcodeproject'
+gem 'xcodeproj'
 gem 'fileutils'
