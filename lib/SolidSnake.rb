@@ -68,29 +68,29 @@ module SolidSnake
             presenterImplementationFile.close
             implementations.new_file "#{componentName}Presenter.swift"
 
-            # Generate Presenter Test
-            interactorGroup = nil
-            presenterGroup = nil
-            for group in testGroup.groups
-                if group.path == "Interactor"
-                    interactorGroup = group
-                elsif group.path = "Presenter"
-                    presenterGroup = group
-                end
-            end
+            # # Generate Presenter Test
+            # interactorGroup = nil
+            # presenterGroup = nil
+            # for group in testGroup.groups
+            #     if group.path == "Interactor"
+            #         interactorGroup = group
+            #     elsif group.path = "Presenter"
+            #         presenterGroup = group
+            #     end
+            # end
 
-            interactorTestPath = "./#{testGroup.path}/Interactor/#{componentName}InteractorTest.swift"
-            puts interactorTestPath
-            interactorTestFile = File.open interactorTestPath, "w"
-            interactorTestFile.puts SolidSnake::Generator.interactor_test componentName, mainGroup.path.to_s.gsub('-', '_')
-            interactorTestFile.close
-            interactorGroup.new_file "#{componentName}InteractorTest.swift"
+            # interactorTestPath = "./#{testGroup.path}/Interactor/#{componentName}InteractorTest.swift"
+            # puts interactorTestPath
+            # interactorTestFile = File.open interactorTestPath, "w"
+            # interactorTestFile.puts SolidSnake::Generator.interactor_test componentName, mainGroup.path.to_s.gsub('-', '_')
+            # interactorTestFile.close
+            # interactorGroup.new_file "#{componentName}InteractorTest.swift"
 
-            presenterTestPath = "./#{testGroup.path}/Presenter/#{componentName}PresenterTest.swift"
-            presenterTestFile = File.open presenterTestPath, "w"
-            presenterTestFile.puts SolidSnake::Generator.presenter_test componentName, mainGroup.path.to_s.gsub('-', '_')
-            presenterTestFile.close
-            presenterGroup.new_file "#{componentName}PresenterTest.swift"
+            # presenterTestPath = "./#{testGroup.path}/Presenter/#{componentName}PresenterTest.swift"
+            # presenterTestFile = File.open presenterTestPath, "w"
+            # presenterTestFile.puts SolidSnake::Generator.presenter_test componentName, mainGroup.path.to_s.gsub('-', '_')
+            # presenterTestFile.close
+            # presenterGroup.new_file "#{componentName}PresenterTest.swift"
 
             puts "Components Created"
             project.save
