@@ -13,6 +13,7 @@
 		6CC62AAA222857A8003B0413 /* ExamplePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5477FB8F2030FB0AAF90E5C1 /* ExamplePresenterTest.swift */; };
 		6CC62AAB222857C6003B0413 /* ExamplePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0C03DA79EFE133B7F07550 /* ExamplePresenter.swift */; };
 		6CC62AAC222857C8003B0413 /* ExampleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AFFD6DC9F547904DD672B1 /* ExampleInteractor.swift */; };
+		6CDB8B76222FA63E00ABEC36 /* LoginInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F74371F02127A1B83DC3E4 /* LoginInteractorProtocol.swift */; };
 		6CF684CB222661C4006B5794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF684CA222661C4006B5794 /* AppDelegate.swift */; };
 		6CF684CD222661C4006B5794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF684CC222661C4006B5794 /* ViewController.swift */; };
 		6CF684D0222661C4006B5794 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CF684CE222661C4006B5794 /* Main.storyboard */; };
@@ -33,9 +34,12 @@
 
 /* Begin PBXFileReference section */
 		2065299B842140F054CE360D /* ExampleInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleInteractorProtocol.swift; sourceTree = "<group>"; };
+		32DE9957383FD15EE8DAA3AE /* LoginPresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenterProtocol.swift; sourceTree = "<group>"; };
 		3E72FC71A43F4FF6300989C5 /* ExamplePresenterProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExamplePresenterProtocol.swift; sourceTree = "<group>"; };
 		5477FB8F2030FB0AAF90E5C1 /* ExamplePresenterTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExamplePresenterTest.swift; sourceTree = "<group>"; };
 		5E0C03DA79EFE133B7F07550 /* ExamplePresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExamplePresenter.swift; sourceTree = "<group>"; };
+		5F6F84FD8920842506DD07AD /* LoginPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		68C9D960943FDF75185C9BBF /* LoginInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		6CF684C7222661C4006B5794 /* solid-snake-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "solid-snake-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF684CA222661C4006B5794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CF684CC222661C4006B5794 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 		6CF684DB222661C6006B5794 /* solid-snake-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "solid-snake-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CF684DF222661C6006B5794 /* solid_snake_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = solid_snake_testTests.swift; sourceTree = "<group>"; };
 		6CF684E1222661C6006B5794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73F74371F02127A1B83DC3E4 /* LoginInteractorProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoginInteractorProtocol.swift; sourceTree = "<group>"; };
 		B3A91831E3BA92D8EEE1B81C /* ExampleInteractorTest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleInteractorTest.swift; sourceTree = "<group>"; };
 		C8AFFD6DC9F547904DD672B1 /* ExampleInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExampleInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,8 +156,19 @@
 			isa = PBXGroup;
 			children = (
 				B3E24FBC6DE3040DD73C79C0 /* Example */,
+				CA88E13E3097C5FDCA6BAA82 /* Login */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		86F10AD7ABB053EE2940C0B5 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				68C9D960943FDF75185C9BBF /* LoginInteractor.swift */,
+				5F6F84FD8920842506DD07AD /* LoginPresenter.swift */,
+			);
+			name = Implementations;
+			path = Login/Implementations;
 			sourceTree = "<group>";
 		};
 		B3E24FBC6DE3040DD73C79C0 /* Example */ = {
@@ -162,6 +178,25 @@
 				634192958DD458F20A18809F /* Implementations */,
 			);
 			name = Example;
+			sourceTree = "<group>";
+		};
+		CA88E13E3097C5FDCA6BAA82 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CB77E72E4E4EF61D52D55E2A /* Interfaces */,
+				86F10AD7ABB053EE2940C0B5 /* Implementations */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		CB77E72E4E4EF61D52D55E2A /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				73F74371F02127A1B83DC3E4 /* LoginInteractorProtocol.swift */,
+				32DE9957383FD15EE8DAA3AE /* LoginPresenterProtocol.swift */,
+			);
+			name = Interfaces;
+			path = Login/Interfaces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +303,7 @@
 				6CC62AAB222857C6003B0413 /* ExamplePresenter.swift in Sources */,
 				6CC62AAC222857C8003B0413 /* ExampleInteractor.swift in Sources */,
 				6CF684CD222661C4006B5794 /* ViewController.swift in Sources */,
+				6CDB8B76222FA63E00ABEC36 /* LoginInteractorProtocol.swift in Sources */,
 				6CC62AA722285777003B0413 /* ExampleInteractorProtocol.swift in Sources */,
 				6CF684CB222661C4006B5794 /* AppDelegate.swift in Sources */,
 				6CC62AA82228577A003B0413 /* ExamplePresenterProtocol.swift in Sources */,
